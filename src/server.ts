@@ -98,7 +98,7 @@ app.delete("/movies/:id", async (req, res) => {
 
         await prisma.movie.delete({ where: { id } });
     } catch (error) {
-        res.status(500).send({ message: "Falha ao remover o registro" });
+        res.status(500).send({ message: "Falha ao remover o registro do filme" });
     }
 
     res.status(200).send();
